@@ -35,7 +35,7 @@ export class ChatHelper {
   }
 
   async question(data) {
-    let response = await fetch('http://localhost:3000/test', {
+    let response = await fetch('http://localhost:4000/test', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
