@@ -1,39 +1,60 @@
-import React, {useState} from 'react';
-import './App.css';
-import {BrowserRouter, Route} from "react-router-dom";
+import React, { useState } from "react";
+import "./App.css";
+import { BrowserRouter, Route } from "react-router-dom";
 import ButtonStart from "./components/ButtonStart/ButtonStart";
+import Tmp from "./components/tmp/Tmp";
+
+interface Button {
+    title: string,
+    description: string,
+    step: number
+}
+
+// class ButtonObj 
+
+const buttons: Array<Button> = [];
+
+const buttonCycled = (current: number): number => {
+  if (current + 1 > buttons.length - 1) {
+    return 0;
+  }
+  return current + 1;
+};
 
 function App() {
+  const buttonStartSrting = "Экскурс по сайту"; // Должно приходить с бека (редачится в админке)
 
-    const buttonStartSrting = "Экскурс по сайту" // Должно приходить с бека (редачится в админке)
+  const [isLearning, setIsLearning] = useState<boolean>(false);
+  const [button, setButton] = useState<number>(0);
 
-    const [isLearning, setIsLearning] = useState<boolean>(false);
+  const current = buttons[button];
 
+  return (
+    <BrowserRouter>
+      <div className={"wrapper"}>
+        <div className={"content"}>
+          <ButtonStart text={buttonStartSrting} startLearning={setIsLearning} />
+        </div>
 
-    return (
-        <BrowserRouter>
-            <div className={"wrapper"}>
-                <div className={'content'}>
-                    <div className={"container"}>
-                        <ButtonStart text={buttonStartSrting} startLearning={setIsLearning}/>
-                        {/*<Route exact path='/startPage'*/}
-                        {/*       render={() =>*/}
-                        {/*       }*/}
-                        {/*/>*/}
-                        {/*<Route path='/startPageAfterRegistration'*/}
-                        {/*       render={() => */}
-                        {/*       }*/}
-                        {/*/>*/}
-                    </div>
-                </div>
-                {isLearning &&
-                <div className={"learning"}>
-                    <div><h1>ОБУЧЕНИЕ НАЧАЛОСЬ</h1></div>
-                </div>
-                }
+        <Tmp currentId={button} />
+
+        {isLearning && (
+          <div className={"learning"}>
+            <div className={"info"}>
+                <div className="title">{current.title}</div>
+                <div className="desc">{current.description}</div>
+              <div
+                className={"button-learning"}
+                onClick={() => setButton(buttonCycled(button))}
+              >
+                {"Next"}
+              </div>
             </div>
-        </BrowserRouter>
-    );
+          </div>
+        )}
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;

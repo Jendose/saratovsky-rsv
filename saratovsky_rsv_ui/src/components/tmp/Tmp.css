@@ -24,14 +24,21 @@
 }
 
 .item {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   position: absolute;
   left: 12rem;
   top: 12rem;
   width: 8rem;
   height: 8rem;
+  padding: 10px;
+}
+.focused {
+  z-index: 999;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid red;
 }
 
 .item > .content {
@@ -63,7 +70,7 @@
 }
 
 .field {
-    width: 46%;
+  width: 46%;
 }
 
 .item1 {
