@@ -8,7 +8,7 @@ type Props = {
 
 const ButtonStart = ({text, startLearning}: Props) => {
     return (
-        <div className={style.button} onClick={() => startLearning}>{text}</div>
+        <div className={style.button} onClick={() => startLearning(true)}>{text}</div>
     );
 }
 
