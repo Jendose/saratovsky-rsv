@@ -1,9 +1,15 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
+<<<<<<< HEAD
 import { BrowserRouter } from "react-router-dom";
 import ButtonStart from "./components/ButtonStart/ButtonStart";
 import Tmp from "./components/tmp/Tmp";
+=======
+import { BrowserRouter, Route } from "react-router-dom";
+import ButtonStart from "./rsv_app/components/ButtonStart/ButtonStart";
+import Tmp from "./rsv_app/components/tmp/Tmp";
+>>>>>>> origin/jendose
 
 interface Button {
   title: string;
@@ -25,6 +31,9 @@ function App() {
 
   const [isLearning, setIsLearning] = useState<boolean>(false);
   const [button, setButton] = useState<number>(-1);
+
+  const [isUserLogined, setIsUserLogined] = useState<boolean>(false);
+  const [isAdminLogined, setIsAdminLogined] = useState<boolean>(false);
 
   useEffect(() => {
     axios

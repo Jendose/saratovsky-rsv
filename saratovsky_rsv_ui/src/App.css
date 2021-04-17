@@ -1,8 +1,8 @@
 .wrapper {
   background-color: #f2f8fa;
   width: 100%;
-  height: 100%;
-  background-image: url("./BG1.png");
+  height: 1599px;
+  background-image: url("rsv_app/resources/BG1.png");
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -36,8 +36,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+<<<<<<< HEAD
   mask: url("./Mask.png");
   /* clip-path: url(#clipping); */
+=======
+  /*mask-image: url("rsv_app/resources/Mask.png");*/
+>>>>>>> origin/jendose
 }
 
 .info {
