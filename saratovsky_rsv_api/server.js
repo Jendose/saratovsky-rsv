@@ -1,12 +1,15 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const buttonRoutes = require('./routes/buttonRoutes');
+const express = require("express");
+const cors = require("cors");
+const mongoose = require("mongoose");
+const buttonRoutes = require("./routes/buttonRoutes");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const app = express();
 const dbURI =
-  'mongodb+srv://moderator:password1234@cluster0.c2kji.mongodb.net/saratovsky-rsv?retryWrites=true&w=majority';
+  "mongodb+srv://moderator:password1234@cluster0.c2kji.mongodb.net/saratovsky-rsv?retryWrites=true&w=majority";
 
+  
+app.use(cors());
 app.use(buttonRoutes);
 app.use(express.urlencoded({ extended: true }));
 
@@ -18,7 +21,7 @@ async function start() {
     });
 
     app.listen(PORT, () => {
-      console.log('Server has been started...');
+      console.log("Server has been started...");
     });
   } catch (e) {
     console.log(e);

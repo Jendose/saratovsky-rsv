@@ -1,4 +1,3 @@
-import React from 'react';
 import style from './ButtonStart.module.css';
 
 type Props = {
@@ -8,7 +7,7 @@ type Props = {
 
 const ButtonStart = ({text, startLearning}: Props) => {
     return (
-        <div className={style.button} onClick={() => startLearning(true)}>{text}</div>
+        <div id={"button"} className={style.button} onClick={() => startLearning(true)}>{text}</div>
     );
 }
 
