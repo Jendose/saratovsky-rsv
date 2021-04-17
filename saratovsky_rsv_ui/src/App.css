@@ -5,7 +5,7 @@
   background-image: url("./BG1.png");
   background-size: 100%;
   background-repeat: no-repeat;
-} 
+}
 
 .wrapper_content {
   height: 1000px;
@@ -36,7 +36,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  mask-image: url("./Mask.png");
+  mask: url("./Mask.png");
+  /* clip-path: url(#clipping); */
 }
 
 .info {

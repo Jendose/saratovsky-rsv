@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import ButtonStart from "./components/ButtonStart/ButtonStart";
 import Tmp from "./components/tmp/Tmp";
 
@@ -54,6 +54,12 @@ function App() {
       });
   }, []);
 
+  useEffect(() => {
+    globalThis.addEventListener("load", (event) => {
+      console.log(window.location.href);
+    });
+  }, []);
+
   const startLearning = (value: boolean): void => {
     setIsLearning(value);
   };
@@ -92,9 +98,9 @@ function App() {
                     }
                   }}
                 >
-                  {((button == buttons.length - 1) ? "Завершить": "Далее")}
+                  {button == buttons.length - 1 ? "Завершить" : "Далее"}
                 </div>
-              </div>
+              </div>  
             </div>
           )}
         </div>
