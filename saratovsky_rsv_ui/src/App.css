@@ -36,12 +36,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-<<<<<<< HEAD
-  mask: url("./Mask.png");
-  /* clip-path: url(#clipping); */
-=======
   /*mask-image: url("rsv_app/resources/Mask.png");*/
->>>>>>> origin/jendose
 }
 
 .info {
@@ -79,3 +74,4 @@
   cursor: pointer;
   background-color: rgb(47, 102, 199);
 }
+

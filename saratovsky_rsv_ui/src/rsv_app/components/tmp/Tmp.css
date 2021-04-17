@@ -2,6 +2,7 @@
   height: 46rem;
   display: flex;
   justify-content: center;
+  z-index: -1;
 }
 
 .rotor {
@@ -74,30 +75,30 @@
 
 /* Проекты */
 .item2 {
-  left: 633.5px; /*410px;*/
-  top: 329.5px; /*172px;*/
+  left: 410px;
+  top: 172px;
 }
 
 /* Обучение */
 .item3 {
-  left: 326.5px; /*195px;*/
-  top: 329.5px; /*172px;*/
+  left: 195px;
+  top: 172px;
 }
 
 /* Трек развития */
 .item4 {
-  left: 173.5px; /*85px;*/
-  top: 595.5px; /*362px;*/
+  left: 85px;
+  top: 362px;
 }
 
 /* Истории успеха */
 .item5 {
-  left: 326.5px; /*195px;*/
-  top: 861.5px; /*547px;*/
+  left: 195px;
+  top: 547px;
 }
 
 /* Помощь другим */
 .item6 {
-  left: 633.5px; /*410px;*/
-  top: 861.5px; /*547px;*/
+  left: 410px;
+  top: 547px;
 }

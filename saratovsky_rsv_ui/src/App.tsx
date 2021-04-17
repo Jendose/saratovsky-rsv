@@ -1,15 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
-<<<<<<< HEAD
-import { BrowserRouter } from "react-router-dom";
-import ButtonStart from "./components/ButtonStart/ButtonStart";
-import Tmp from "./components/tmp/Tmp";
-=======
 import { BrowserRouter, Route } from "react-router-dom";
 import ButtonStart from "./rsv_app/components/ButtonStart/ButtonStart";
 import Tmp from "./rsv_app/components/tmp/Tmp";
->>>>>>> origin/jendose
+import "./style.css";
+import { ChatHelper } from "./chatHelper";
 
 interface Button {
   title: string;
@@ -69,6 +65,10 @@ function App() {
     });
   }, []);
 
+  useEffect(() => {
+    const Helper = new ChatHelper("#chatHelper", {});
+  }, []);
+
   const startLearning = (value: boolean): void => {
     setIsLearning(value);
   };
@@ -77,6 +77,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <div id="chatHelper"></div>
       <div className={"wrapper " + (isLearning ? "blocked" : "")}>
         <div className={"wrapper_content"}>
           <div className={"content"}>
@@ -109,7 +110,7 @@ function App() {
                 >
                   {button == buttons.length - 1 ? "Завершить" : "Далее"}
                 </div>
-              </div>  
+              </div>
             </div>
           )}
         </div>
