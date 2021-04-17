@@ -59,40 +59,45 @@
 }
 
 .image {
-  width: 4rem;
-  height: 4rem;
+  width: 4vw;
+  height: 4vw;
   border-radius: 50%;
   background-color: #fff;
   background-size: 100%;
-  box-shadow: 0 0.1rem 0.4rem rgb(79 94 105 / 24%);
-  transition: 0.5s;
+  box-shadow: 0 0.1rem 0.4rem rgb(79, 94, 105);
+  /*transition: 0.5s;*/
 }
 
 .field {
   width: 46%;
 }
 
+/* Проекты */
 .item2 {
-  left: 410px;
-  top: 172px;
+  left: 633.5px; /*410px;*/
+  top: 329.5px; /*172px;*/
 }
 
+/* Обучение */
 .item3 {
-  left: 195px;
-  top: 172px;
+  left: 326.5px; /*195px;*/
+  top: 329.5px; /*172px;*/
 }
 
+/* Трек развития */
 .item4 {
-  left: 85px;
-  top: 362px;
+  left: 173.5px; /*85px;*/
+  top: 595.5px; /*362px;*/
 }
 
+/* Истории успеха */
 .item5 {
-  left: 195px;
-  top: 547px;
+  left: 326.5px; /*195px;*/
+  top: 861.5px; /*547px;*/
 }
 
+/* Помощь другим */
 .item6 {
-  left: 410px;
-  top: 547px;
+  left: 633.5px; /*410px;*/
+  top: 861.5px; /*547px;*/
 }

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 import { BrowserRouter, Route } from "react-router-dom";
-import ButtonStart from "./components/ButtonStart/ButtonStart";
-import Tmp from "./components/tmp/Tmp";
+import ButtonStart from "./rsv_app/components/ButtonStart/ButtonStart";
+import Tmp from "./rsv_app/components/tmp/Tmp";
 
 interface Button {
   title: string;
@@ -25,6 +25,9 @@ function App() {
 
   const [isLearning, setIsLearning] = useState<boolean>(false);
   const [button, setButton] = useState<number>(-1);
+
+  const [isUserLogined, setIsUserLogined] = useState<boolean>(false);
+  const [isAdminLogined, setIsAdminLogined] = useState<boolean>(false);
 
   useEffect(() => {
     axios
