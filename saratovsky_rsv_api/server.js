@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const buttonRoutes = require('./routes/buttonRoutes');
+const chatHelperRoutes = require('./routes/chatHelperRoutes');
+const chainButtonRoutes = require('./routes/chainButtonRoutes');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -8,6 +10,8 @@ const dbURI =
   'mongodb+srv://moderator:password1234@cluster0.c2kji.mongodb.net/saratovsky-rsv?retryWrites=true&w=majority';
 
 app.use(buttonRoutes);
+app.use(chatHelperRoutes);
+app.use(chainButtonRoutes);
 app.use(express.urlencoded({ extended: true }));
 
 async function start() {
