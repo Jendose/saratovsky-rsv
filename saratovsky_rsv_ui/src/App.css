@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  min-height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 3em;
+}
+
+.content {
+  flex: 1;
+  height: 100%;
+  padding: 3em 0;
+}
