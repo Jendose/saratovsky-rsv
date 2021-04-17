@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const buttonRoutes = require("./routes/buttonRoutes");
+=======
+const express = require('express');
+const mongoose = require('mongoose');
+const buttonRoutes = require('./routes/buttonRoutes');
+const chatHelperRoutes = require('./routes/chatHelperRoutes');
+const chainButtonRoutes = require('./routes/chainButtonRoutes');
+>>>>>>> origin/artem
 
 const PORT = process.env.PORT || 4000;
 const app = express();
@@ -11,6 +19,8 @@ const dbURI =
   
 app.use(cors());
 app.use(buttonRoutes);
+app.use(chatHelperRoutes);
+app.use(chainButtonRoutes);
 app.use(express.urlencoded({ extended: true }));
 
 async function start() {
