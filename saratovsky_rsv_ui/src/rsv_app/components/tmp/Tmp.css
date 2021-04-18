@@ -37,7 +37,7 @@
 }
 .focused {
   z-index: 999;
-  background-color: #F2F8FA;
+  background-color: #f2f8fa;
   border-radius: 10%;
   /* border: 1px solid red; */
 }
@@ -73,68 +73,66 @@
   width: 46%;
 }
 
-
 /* ВЕРСИЯ ДЛЯ JENDOSE */
-
+/*
 /* Проекты */
-.item2 {
-  left: 608.5px; /* -25 */
-  top: 279.5px; /* -50 */
-}
+/* .item2 {
+  left: 608.5px; 
+  top: 279.5px; 
+} */
 
 /* Обучение */
-.item3 {
-  left: 301.5px; /* -25 */
-  top: 279.5px; /* -50 */
-}
+/* .item3 {
+  left: 301.5px; 
+  top: 279.5px; 
+} */
 
 /* Трек развития */
-.item4 {
-  left: 148.5px; /* -25 */
-  top: 545.5px; /* -50 */
-}
+/* .item4 {
+  left: 148.5px;
+  top: 545.5px;
+} */
 
 /* Истории успеха */
-.item5 {
-  left: 301.5px; /* -25 */
-  top: 811.5px; /* -50 */
-}
+/* .item5 {
+  left: 301.5px; 
+  top: 811.5px; 
+} */
 
 /* Помощь другим */
-.item6 {
-  left: 608.5px; /* -25 */
-  top: 811.5px; /* -50 */
-}
-
+/* .item6 {
+  left: 608.5px; 
+  top: 811.5px; 
+} */
 
 /* ВЕРСИЯ ДЛЯ VOVA */
 
 /*!* Проекты *!*/
-/*.item2 {*/
-/*  left: 410px;*/
-/*  top: 172px;*/
-/*}*/
+.item2 {
+  left: 410px;
+  top: 172px;
+}
 
 /*!* Обучение *!*/
-/*.item3 {*/
-/*  left: 195px;*/
-/*  top: 172px;*/
-/*}*/
+.item3 {
+  left: 195px;
+  top: 172px;
+}
 
 /*!* Трек развития *!*/
-/*.item4 {*/
-/*  left: 85px;*/
-/*  top: 362px;*/
-/*}*/
+.item4 {
+  left: 85px;
+  top: 362px;
+}
 
 /*!* Истории успеха *!*/
-/*.item5 {*/
-/*  left: 195px;*/
-/*  top: 547px;*/
-/*}*/
+.item5 {
+  left: 195px;
+  top: 547px;
+}
 
 /*!* Помощь другим *!*/
-/*.item6 {*/
-/*  left: 410px;*/
-/*  top: 547px;*/
-/*}*/
+.item6 {
+  left: 410px;
+  top: 547px;
+}

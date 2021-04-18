@@ -1,6 +1,33 @@
 import "./AdminPanel.css";
 
-function AdminPanel() {
+interface Button {
+  title: string;
+  description: string;
+  step: number;
+}
+
+type Props = {
+  arr: Array<Button>;
+};
+
+function AdminPanel({ arr: Array }: Props) {
+  const renderData = () => {
+    console.log(Array);
+    let data = [];
+
+    for (let i = 0; i < Array.length; i++) {
+      data.push(
+        <ul className="collection">
+          <li className="collection-item">{Array[i].title}</li>
+          <li className="collection-item">{Array[i].step}</li>
+          <li className="collection-item">{Array[i].description}</li>
+        </ul>
+      );
+    }
+
+    return data;
+  };
+
   return (
     <div>
       <div>
@@ -26,7 +53,7 @@ function AdminPanel() {
       <div>
         <div className="main__info">
           <div className="form__div">
-            <form action="">
+            <form action="" method="POST">
               <ul>
                 <li>
                   <label htmlFor="name">Enter title for update:</label>
@@ -52,25 +79,7 @@ function AdminPanel() {
           </div>
           <div className="collection__div">
             <b>Buttons in database</b>
-            <ul className="collection">
-              <li className="collection-item">courses</li>
-              <li className="collection-item">1</li>
-              <li className="collection-item">
-                Если вам интересно обучение, нажмите на кнопку
-              </li>
-            </ul>
-            <ul className="collection">
-              <li className="collection-item">track</li>
-              <li className="collection-item">2</li>
-              <li className="collection-item">
-                Если вам интересно трек-развитие, нажмите на кнопку
-              </li>
-            </ul>
-            <ul className="collection">
-              <li className="collection-item">Alvin</li>
-              <li className="collection-item">Alvin</li>
-              <li className="collection-item">Alvin</li>
-            </ul>
+            {renderData()}
           </div>
         </div>
       </div>
