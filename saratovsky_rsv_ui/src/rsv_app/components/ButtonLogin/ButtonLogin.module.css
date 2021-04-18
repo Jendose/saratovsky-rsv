@@ -21,25 +21,21 @@
     background-color: rgb(47, 102, 199);
 }
 
-.login-as-user {
+.loginAsUser, .loginAsAdmin {
+    margin-top: 10px;
+    padding: 10px 10px;
+    border-radius: 0.2vw;
     cursor: pointer;
-    color: white;
-    background-color: rgb(56, 116, 224);
+    color: black;
+    background-color: rgb(177, 177, 177);
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
 }
 
-.login-as-user:hover {
+.loginAsUser:hover, .loginAsAdmin:hover {
     cursor: pointer;
-    background-color: rgb(47, 102, 199);
-}
-
-.login-as-admin {
-    color: white;
-    background-color: rgb(56, 116, 224);
-}
-
-.login-as-admin:hover {
-    cursor: pointer;
-    background-color: rgb(47, 102, 199);
+    background-color: rgb(206, 206, 206);
 }
 
 .main_button {

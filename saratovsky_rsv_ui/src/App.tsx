@@ -96,11 +96,9 @@ function App() {
                 }}
               />
               {isAdminLogined && (
-                <div>
                   <NavLink to={"/admin"} className={"navLink-admin"}>
                     {"Редактировать"}
                   </NavLink>
-                </div>
               )}
             </div>
 
@@ -121,7 +119,7 @@ function App() {
                             setButton(-1);
                             if (isUserLogined) {
                               Helper.sendMessage(
-                                "Вы прошли обучение! Спасибо за регистрацию! Остались ли у Вас вопросы?",
+                                "Вы прошли обучение. И спасибо Вам за регистрацию! Остались ли у Вас вопросы?",
                                 "bot"
                               );
                             } else {

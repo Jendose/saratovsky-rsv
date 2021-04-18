@@ -30,7 +30,12 @@ const ButtonLogin = ({loginAsUser, loginAsAdmin}: Props) => {
             loginAsAdmin(false);
         }
         else {
-            setIsOpened(true);
+            if(isOpened){
+                setIsOpened(false);
+            }
+            else {
+                setIsOpened(true);
+            }
         }
     }
 
