@@ -23,7 +23,18 @@ const addButton = async (req, res) => {
   }
 };
 
+const updateButtonByTitle = async (req, res) => {
+  const title = req.params.title;
+  try {
+    const result = await Button.updateOne(title);
+    res.json({ redirect: '/' });
+  } catch (e) {
+    console.log(e);
+  }
+};
+
 module.exports = {
   allButtons,
   addButton,
+  updateButtonByTitle,
 };
