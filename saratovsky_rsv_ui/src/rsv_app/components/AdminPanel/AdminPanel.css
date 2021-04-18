@@ -17,3 +17,11 @@
   flex: 1;
   overflow-y: scroll;
 }
+
+.nav-wrapper {
+  background-color: #26a69a;
+}
+
+.button1 {
+  width: 100%;
+}
