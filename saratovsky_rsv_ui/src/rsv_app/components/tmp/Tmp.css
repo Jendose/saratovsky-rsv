@@ -37,8 +37,8 @@
 }
 .focused {
   z-index: 999;
-  background-color: #fff;
-  border-radius: 50%;
+  background-color: #F2F8FA;
+  border-radius: 10%;
   /* border: 1px solid red; */
 }
 
