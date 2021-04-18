@@ -19,7 +19,7 @@
 
 #chat__helper__button {
   /* background-color: #d64c3b; */
-  background-color: #c4261d;
+  background-color: #d1004a;
   width: 80px;
   height: 80px;
   border: none;
@@ -34,7 +34,7 @@
 
 #chat__helper__button:hover {
   cursor: pointer;
-  background-color: #3b77d6;
+  background-color: #3874e0;
 }
 
 #chat__helper__button:focus {
@@ -83,7 +83,7 @@
 
 .chat__helper__head__avatar {
   position: absolute;
-  background-color: #3b77d6;
+  background-color: #3874e0;
   color: white;
   top: -40px;
   width: 80px;
@@ -108,7 +108,7 @@
 }
 
 #chat__helper__head__close:hover {
-  color: #d64c3b;
+  color: #d1004a;
   cursor: pointer;
 }
 
@@ -136,7 +136,7 @@
 #scroll__style::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #3b77d6;
+  background-color: #3874e0;
 }
 
 .chatlog__message {
@@ -173,7 +173,7 @@
 }
 
 .chatlog__message.user p:last-child {
-  background-color: #3b77d6;
+  background-color: #3874e0;
   color: #ffffff;
   overflow-wrap: break-word;
 }
@@ -213,7 +213,7 @@
   border-radius: 50%;
   margin-right: 30px;
   border: none;
-  background-color: #3b77d6;
+  background-color: #3874e0;
   color: #ffffff;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
 }
