@@ -1,0 +1,138 @@
+.wide-main {
+  height: 46rem;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+}
+
+.rotor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 46%;
+}
+
+.rim {
+  position: relative;
+  width: 32rem;
+  height: 32rem;
+  border-radius: 50%;
+  border: 1px solid rgba(164, 196, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  padding: 10px;
+  top: 0;
+  left: 0;
+}
+.focused {
+  z-index: 999;
+  background-color: #f2f8fa;
+  border-radius: 10%;
+  /* border: 1px solid red; */
+}
+
+.item > .content {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  width: max-content;
+  text-align: center;
+  position: absolute;
+  white-space: nowrap;
+  top: 0;
+  transition: top 0.5s;
+  color: #646464;
+}
+
+.image {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background-color: #fff;
+  background-size: 100%;
+  box-shadow: 0 0.1rem 0.4rem rgb(79, 94, 105);
+  /*transition: 0.5s;*/
+}
+
+.field {
+  width: 46%;
+}
+
+/* ВЕРСИЯ ДЛЯ JENDOSE */
+/*
+/* Проекты */
+/* .item2 {
+  left: 608.5px; 
+  top: 279.5px; 
+} */
+
+/* Обучение */
+/* .item3 {
+  left: 301.5px; 
+  top: 279.5px; 
+} */
+
+/* Трек развития */
+/* .item4 {
+  left: 148.5px;
+  top: 545.5px;
+} */
+
+/* Истории успеха */
+/* .item5 {
+  left: 301.5px; 
+  top: 811.5px; 
+} */
+
+/* Помощь другим */
+/* .item6 {
+  left: 608.5px; 
+  top: 811.5px; 
+} */
+
+/* ВЕРСИЯ ДЛЯ VOVA */
+
+/*!* Проекты *!*/
+.item2 {
+  left: 410px;
+  top: 172px;
+}
+
+/*!* Обучение *!*/
+.item3 {
+  left: 195px;
+  top: 172px;
+}
+
+/*!* Трек развития *!*/
+.item4 {
+  left: 85px;
+  top: 362px;
+}
+
+/*!* Истории успеха *!*/
+.item5 {
+  left: 195px;
+  top: 547px;
+}
+
+/*!* Помощь другим *!*/
+.item6 {
+  left: 410px;
+  top: 547px;
+}

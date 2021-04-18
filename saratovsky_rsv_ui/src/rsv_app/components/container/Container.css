@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.text {
+  position: absolute;
+  left: 10%;
+  width: 20%;
+  font-weight: 600;
+}
+
+.button {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #3874E0;
+    padding: 10px 50px;
+    border-radius: 7px;
+}

@@ -1,0 +1,23 @@
+.button {
+    /* Jendose */
+    /* margin-top: 250px; */
+
+    /* Vova */
+    margin-top: 100px;
+
+    margin-bottom: 0;
+    padding: 2vh 4vw;
+    border-radius: 0.3vw;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(56, 116, 224);
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgb(47, 102, 199);
+}
+
