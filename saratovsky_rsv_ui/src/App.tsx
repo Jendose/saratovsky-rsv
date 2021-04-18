@@ -6,6 +6,7 @@ import ButtonStart from "./rsv_app/components/ButtonStart/ButtonStart";
 import Tmp from "./rsv_app/components/tmp/Tmp";
 import "./style.css";
 import { ChatHelper } from "./chatHelper";
+import ButtonLogin from "./rsv_app/components/ButtonLogin/ButtonLogin";
 
 interface Button {
   title: string;
@@ -28,7 +29,7 @@ function App() {
   const [isLearning, setIsLearning] = useState<boolean>(false);
   const [button, setButton] = useState<number>(-1);
 
-  const [isUserLogined, setIsUserLogined] = useState<boolean>(false);
+  const [isUserLogined, setIsUserLogined] = useState<boolean>(false); // TODO: ОТ ЭТОГО зависит содержание первого сообщения
   const [isAdminLogined, setIsAdminLogined] = useState<boolean>(false);
 
   useEffect(() => {
@@ -81,6 +82,10 @@ function App() {
       <div className={"wrapper " + (isLearning ? "blocked" : "")}>
         <div className={"wrapper_content"}>
           <div className={"content"}>
+              <ButtonLogin
+                  loginAsUser={(value: boolean) => setIsUserLogined(value)}
+                  loginAsAdmin={(value: boolean) => setIsAdminLogined(value)}
+              />
             <ButtonStart
               text={buttonStartSrting}
               startLearning={() => {
@@ -88,6 +93,9 @@ function App() {
                 setButton(0);
               }}
             />
+              { isAdminLogined &&
+                  <div>Редактировать</div>
+              }
           </div>
 
           <Tmp currentId={button} />
