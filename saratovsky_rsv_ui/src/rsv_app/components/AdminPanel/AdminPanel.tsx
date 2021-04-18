@@ -17,7 +17,7 @@ function AdminPanel({ arr: Array }: Props) {
 
     for (let i = 0; i < Array.length; i++) {
       data.push(
-        <ul className="collection">
+        <ul className="collection" key={i}>
           <li className="collection-item">{Array[i].title}</li>
           <li className="collection-item">{Array[i].step}</li>
           <li className="collection-item">{Array[i].description}</li>
@@ -53,24 +53,27 @@ function AdminPanel({ arr: Array }: Props) {
       <div>
         <div className="main__info">
           <div className="form__div">
-            <form action="" method="POST">
+            <form action="http://localhost:4000/update" method="POST">
               <ul>
                 <li>
                   <label htmlFor="name">Enter title for update:</label>
-                  <input type="text" id="name" name="title" />
+                  <input type="text" id="name" name="title" required />
                 </li>
                 <li>
                   <label htmlFor="step">Step:</label>
-                  <input type="number" id="step" name="step" />
+                  <input type="number" id="step" name="step" required />
                 </li>
                 <li>
                   <label htmlFor="msg">Description:</label>
-                  <textarea id="msg" name="desc"></textarea>
+                  <textarea id="msg" name="desc" required></textarea>
                 </li>
                 <button
                   className="btn waves-effect waves-light button1"
                   type="submit"
                   name="action"
+                  onSubmit={(e) => {
+                    console.log(e);
+                  }}
                 >
                   Update
                 </button>
