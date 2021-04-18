@@ -23,6 +23,8 @@ const buttonCycled = (current: number): number => {
   return current + 1;
 };
 
+let Helper: ChatHelper;
+
 function App() {
   const buttonStartSrting = "Экскурс по сайту"; // Должно приходить с бека (редачится в админке)
 
@@ -47,11 +49,9 @@ function App() {
 
         buttons.sort((a, b) => {
           if (a.step > b.step) return 1;
-          if (a.step == b.step) return 0;
+          if (a.step === b.step) return 0;
           return -1;
         });
-
-        console.log(buttons);
 
         current = buttons[0];
       })
@@ -62,12 +62,12 @@ function App() {
 
   useEffect(() => {
     globalThis.addEventListener("load", (event) => {
-      console.log(window.location.href);
+      // axios.post("http://localhost:4000/clicks", { url: window.location.href });
     });
   }, []);
 
   useEffect(() => {
-    const Helper = new ChatHelper("#chatHelper", {});
+    Helper = new ChatHelper("#chatHelper", {});
   }, []);
 
   const startLearning = (value: boolean): void => {
@@ -103,20 +103,35 @@ function App() {
           {isLearning && (
             <div className={"learning"}>
               <div className={"info"}>
-                <div className="title">{current.title}</div>
-                <div className="desc">{current.description}</div>
-                <div
-                  className={"button-learning"}
-                  onClick={() => {
-                    if (button == buttons.length - 1) {
-                      startLearning(false);
-                      setButton(-1);
-                    } else {
-                      setButton(buttonCycled(button));
-                    }
-                  }}
-                >
-                  {button == buttons.length - 1 ? "Завершить" : "Далее"}
+                <div className="wrapp">
+                  <div className="title">{current.title}</div>
+                  <div className="desc">{current.description}</div>
+                  <div className="buttons">
+                    <div
+                      className={"button-learning"}
+                      onClick={() => {
+                        if (button === buttons.length - 1) {
+                          startLearning(false);
+                          setButton(-1);
+                          Helper.sendMessage("Вы прошли обучение!", "bot");
+                        } else {
+                          setButton(buttonCycled(button));
+                        }
+                      }}
+                    >
+                      {button === buttons.length - 1 ? "Завершить" : "Далее"}
+                    </div>
+                    <div
+                      className={"button-cancel"}
+                      onClick={() => {
+                        startLearning(false);
+                        setButton(-1);
+                        Helper.sendMessage("Вы прошли обучение!", "bot");
+                      }}
+                    >
+                      {"Отмена"}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
