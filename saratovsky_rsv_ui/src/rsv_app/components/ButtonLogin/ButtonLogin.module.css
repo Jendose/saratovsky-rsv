@@ -1,12 +1,12 @@
 .button {
     /* Jendose */
-    margin-top: 250px;
+    /* margin-top: 250px; */
 
     /* Vova */
-    /*margin-top: 100px;*/
+    margin-top: 0px;
 
     margin-bottom: 0;
-    padding: 2vh 4vw;
+    padding: 6px 10px;
     border-radius: 0.3vw;
     text-decoration: none;
     color: white;
@@ -22,6 +22,7 @@
 }
 
 .login-as-user {
+    cursor: pointer;
     color: white;
     background-color: rgb(56, 116, 224);
 }
@@ -39,4 +40,11 @@
 .login-as-admin:hover {
     cursor: pointer;
     background-color: rgb(47, 102, 199);
+}
+
+.main_button {
+    position: absolute;
+    top: 13px;
+    right: 75px;
+    width: 100px;
 }

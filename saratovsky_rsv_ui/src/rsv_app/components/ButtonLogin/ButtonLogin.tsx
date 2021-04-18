@@ -35,7 +35,7 @@ const ButtonLogin = ({loginAsUser, loginAsAdmin}: Props) => {
     }
 
     return (
-        <div>
+        <div className={style.main_button}>
             <div id={"button"} className={style.button} onClick={handleLogin}>{isLogined ? "Выйти" : "Войти"}</div>
             { isOpened &&
             <div className={style.loginAsUser} onClick={userLogin}>Зайти как пользователь</div>

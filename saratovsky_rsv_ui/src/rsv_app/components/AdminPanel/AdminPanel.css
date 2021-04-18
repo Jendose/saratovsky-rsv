@@ -1,0 +1,27 @@
+.main__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  height: 400px;
+}
+
+.form__div {
+  flex: 1;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.collection__div {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.nav-wrapper {
+  background-color: #26a69a;
+}
+
+.button1 {
+  width: 100%;
+}

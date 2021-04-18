@@ -39,8 +39,10 @@ bower_components
 build/Release
 
 # Dependency directories
+coverage/
 node_modules/
 jspm_packages/
+build/
 
 # TypeScript v1 declaration files
 typings/
@@ -72,6 +74,7 @@ typings/
 # dotenv environment variables file
 .env
 .env.test
+.DS_Store
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
