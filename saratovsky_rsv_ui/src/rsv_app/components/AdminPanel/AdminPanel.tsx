@@ -13,7 +13,7 @@ const buttons: Array<Button> = [];
 function AdminPanel() {
   const [inputTitle, setInputTitle] = useState<string>("");
   const [inputDesc, setInputDesc] = useState<string>("");
-  const [inputStep, setInputStep] = useState<number>(1);
+  const [inputStep, setInputStep] = useState<string>("");
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   useEffect(() => {
@@ -103,14 +103,12 @@ function AdminPanel() {
                 <li>
                   <label htmlFor="step">Step:</label>
                   <input
-                    type="number"
+                    type="text"
                     id="step"
                     name="step"
                     value={inputStep}
-                    min={1}
-                    max={500}
                     required
-                    onChange={(e) => setInputStep(+e.currentTarget.value)}
+                    onChange={(e) => setInputStep(e.currentTarget.value)}
                   />
                 </li>
                 <li>
