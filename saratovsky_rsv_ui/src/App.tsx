@@ -68,7 +68,9 @@ function App() {
   }, []);
 
   useEffect(() => {
-    Helper = new ChatHelper("#chatHelper", {});
+    if (window.location.href === "http://localhost:3000/") {
+      Helper = new ChatHelper("#chatHelper", {});
+    }
   }, []);
 
   const startLearning = (value: boolean): void => {
@@ -98,7 +100,7 @@ function App() {
               {isAdminLogined && (
                 <div>
                   <NavLink to={"/admin"} className={"navLink-admin"}>
-                    {"Редактировать"}
+                    {<div className={"button-edit"}>{"Редактировать"}</div>}
                   </NavLink>
                 </div>
               )}
@@ -130,6 +132,7 @@ function App() {
                                 "bot"
                               );
                             }
+                            Helper.openChatHelper();
                           } else {
                             setButton(buttonCycled(button));
                           }
@@ -142,7 +145,6 @@ function App() {
                         onClick={() => {
                           startLearning(false);
                           setButton(-1);
-                          Helper.sendMessage("Вы прошли обучение!", "bot");
                         }}
                       >
                         {"Отмена"}
@@ -155,7 +157,7 @@ function App() {
           </div>
         </div>
       </Route>
-      <Route path="/admin" component={() => <AdminPanel arr={buttons} />} />
+      <Route path="/admin" component={AdminPanel} />
     </BrowserRouter>
   );
 }
